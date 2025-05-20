@@ -1,0 +1,3 @@
+xcp_utils.o: F:/toolbox/coder/xcp/src/target/server/common/xcp_utils.c \
+ F:/toolbox/coder/xcp/src/target/server/common/xcp_utils.h
+F:/toolbox/coder/xcp/src/target/server/common/xcp_utils.h:

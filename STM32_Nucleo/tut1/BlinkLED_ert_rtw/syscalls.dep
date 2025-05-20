@@ -1,0 +1,2 @@
+syscalls.o: \
+ D:/ME/Career/04.MBD/Projects/hardware/STM32_Nucleo/tut1/blinkLED/STM32CubeIDE/Application/User/Core/syscalls.c

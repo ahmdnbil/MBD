@@ -1,0 +1,10 @@
+config load "D:\ME\Career\04.MBD\Projects\hardware\STM32_Nucleo\tut03\servoMotor\servoMotor.ioc"
+project toolchain STM32CubeIDE
+
+SetStructure Advanced
+
+project setCustomFWPath "D:\Users\User\STM32Cube\Repository\STM32Cube_FW_F4_V1.26.2"
+
+project generate 
+
+exit wait
