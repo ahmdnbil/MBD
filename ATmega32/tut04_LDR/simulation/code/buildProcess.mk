@@ -90,7 +90,7 @@ UservCFile = Include/SERVICES/UART/UART_serv.c
 UservOFile = Debug/$(subst .c,.o,$(UservCFile))
 UservDFile = Debug/$(subst .c,.d,$(UservCFile))
 
-DLCICFile = Include/Simulink/PCCI.c
+DLCICFile = Include/Simulink/LDR.c
 DLCIOFile = Debug/$(subst .c,.o,$(DLCICFile))
 DLCIDFile = Debug/$(subst .c,.d,$(DLCICFile))
 

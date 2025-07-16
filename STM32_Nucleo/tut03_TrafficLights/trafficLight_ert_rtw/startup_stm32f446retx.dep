@@ -1,0 +1,2 @@
+startup_stm32f446retx.o: \
+ D:/ME/Career/04.MBD/Projects/Project02_TrafficLights/trafficLight/STM32CubeIDE/Application/User/Startup/startup_stm32f446retx.s

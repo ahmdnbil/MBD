@@ -1,0 +1,2 @@
+syscalls.o: \
+ D:/ME/Career/04.MBD/Projects/Project02_TrafficLights/trafficLight/STM32CubeIDE/Application/User/Core/syscalls.c

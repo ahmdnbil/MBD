@@ -31,19 +31,25 @@
 #include "./Include/SERVICES/UART/UART_serv.h"
 
 //simulink
-#include "./Include/Simulink/PCCI.h"
+#include "./Include/Simulink/LDR.h"
 #include "./Include/Simulink/lampLogicFunc.h"
 
 void main()
 {
-    DIO_InitPin(PORTA,PIN0,PIN_OUTPUT,PIN_LOW);
-    DIO_InitPin(PORTA,PIN1,PIN_INPUT,PIN_FLOATING);
+    DIO_InitPin(PORTA,PIN0,PIN_INPUT,PIN_FLOATING);
+    DIO_InitPin(PORTA,PIN1,PIN_OUTPUT,PIN_LOW);
+    DIO_InitPin(PORTA,PIN2,PIN_OUTPUT,PIN_LOW);
+    DIO_InitPin(PORTA,PIN3,PIN_OUTPUT,PIN_LOW);
     ADC_voidInit(ADC_PRESCALER_64,AVCC);
     while (1)
     {
 
-        rtU.ADCreading = ADC_u16GetDigitalValueBlocking(ADC1);
-        lampLogicFunc(rtU.ADCreading, &rtY.LampLogic);
-        DIO_WritePin(PORTA, PIN0, rtY.LampLogic);
+        rtU.ADCreading_u16 = ADC_u16GetDigitalValueBlocking(ADC0);
+        lampLogicFunc(rtU.ADCreading_u16, &rtY.firstLamp_B, &rtY.secondLamp_B,
+                      &rtY.thirdLamp_B);
+        DIO_WritePin(PORTA, PIN1, rtY.firstLamp_B);
+        DIO_WritePin(PORTA, PIN2, rtY.secondLamp_B);
+        DIO_WritePin(PORTA, PIN3, rtY.thirdLamp_B);
+
     }
 }
