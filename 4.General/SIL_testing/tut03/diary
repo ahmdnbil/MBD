@@ -1,0 +1,4 @@
+clear
+uiopen('D:\ME\Career\04.MBD\Tutorials\SIL_testing\tut03\diary',1)
+ahmed=6; m=5; s=10;
+diary ahmed.txt
